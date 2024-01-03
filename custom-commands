@@ -1,0 +1,42 @@
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias ll='ls -lha'
+alias la='ls -la'
+alias sniff='sudo tcpdump -i tun0'
+alias ports='netstat -tulanp'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias findfile='find . -type f | grep'
+alias editbash='nano ~/.bashrc'
+alias reloadbash='source ~/.bashrc'
+alias psg='ps aux | grep'
+alias nano='nano -w'
+alias vi='vim'
+alias myip='curl http://ipinfo.io/ip'
+alias flushdns='sudo systemd-resolve --flush-caches'
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.argv[1]))"'
+alias urldecode='python -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.argv[1]))"'
+alias nmap='nmap -v'
+alias nikto='nikto -h'
+alias untar='tar -zxvf'
+alias unzip='unzip -o'
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gp='git push'
+alias sshkey='cat ~/.ssh/id_rsa.pub | xclip -selection c'
+alias chmodx='chmod +x'
+alias up="ip -f inet addr show tun0 | echo \"http://\`grep -Po 'inet \K[\d.]+'\`/\"; echo $PWD; sudo python3 -m http.server 80"
+alias ducks='du -cks * | sort -rn | head'
+alias strings='strings -a'
+alias hexdump='xxd'
+alias open="xdg-open"
+alias vim="micro"
+alias chromium="chromium --no-sandbox"
+alias j=john $1 --wordlist=/usr/share/wordlists/rockyou.txt
+alias fix="stty -a | sed 's/;//g' | head -n 1 | sed 's/.*baud /s│
+tty /g;s/line.*//g' | xclip -sel clip && stty raw -echo; fg"
